@@ -9,6 +9,6 @@ RUN apk add --no-cache --virtual=build-dependencies wget openssl \
 
 ENV BMP_PORT 8080
 ENV PORT_RANGE 8081-8081
-ENV JAVA_OPTS "-Djsse.enableSNIExtension false"
+ENV JAVA_OPTS "-Djsse.enableSNIExtension=false"
 
 CMD /browsermob-proxy/bin/browsermob-proxy -port $BMP_PORT -proxyPortRange $PORT_RANGE
